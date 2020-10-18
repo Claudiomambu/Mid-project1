@@ -1,3 +1,7 @@
+.warnaheader{
+    background-color: #6600CC;
+    color: white;
+}
 h1{
     font-family: 'Open Sans Condensed', sans-serif;
     font-family: 'Poppins', sans-serif
@@ -6,5 +10,15 @@ h1{
 button{
     background-color:#6600CC;
     color : white;
+}
+.display{
+    display:grid;
+    grid-template-columns: 70% 30%;
+}
+.Home{
+    background-color: #6600CC;
+    text-align: center;
+    color: white;
+    height: 58px;
 }
 
