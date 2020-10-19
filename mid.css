@@ -3,8 +3,7 @@
     color: white;
 }
 h1{
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-family: 'Poppins', sans-serif
+    font-family: 'Commissioner', sans-serif;
     
 }
 button{
@@ -21,4 +20,13 @@ button{
     color: white;
     height: 58px;
 }
-
+.About{
+    background-color: #6600CC;
+    text-align: center;
+    color: white;
+    height: 58px;
+    margin-top: 58.5vh;
+}
+.ungu{
+    color: #6600CC;
+}
