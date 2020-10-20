@@ -38,8 +38,8 @@
             <div>
                 
                 <h4>Add Student</h4>
-                <button type="button">Show Form Add New student</button>
-                    <form>
+                <button type="button" id="showhide" >Show Form Add New student</button>
+                    <form id="add-student" style="display: none;">
                             <br>
                         <label for="nim">Student ID (NIM)</label>
                         <input type="text" class="form-control" name="nim" id="nim" placeholder="Masukan NIM ...">
@@ -53,21 +53,21 @@
                         <input type="radio" name="JK" id="gender" value="P"> perempuan
                             <br><br>
                         <label >Faculty</label><br>
-                        <select class="container">
-                        <option value="">-- SELECT FACULTY --</option>
-                        <option value="PS">PascaSerjana</option>
-                        <option value="filsafat">Fakultas Filsafat</option>
-                        <option value="fkip">Fakultas Keguruan dan ilmu Pendidikan</option>
-                        <option value="fekon">Fakultas Ekonomi dan Bisnis</option>
-                        <option value="pertanian">Fakultas Pertanian</option>
-                        <option value="fik">Fakultas Ilmu Komputer</option>
-                        <option value="fkep">Fakultas Keperawatan</option>
-                        <option value="asmik">Fakultas Sekretari Manajemen Indonesia Klabat</option>
+                        <select class="container" id="faculty1" class="costume-select" >
+                            <option value="">-- SELECT FACULTY --</option>
+                            <option value="PS">PascaSerjana</option>
+                            <option value="filsafat">Fakultas Filsafat</option>
+                            <option value="fkip">Fakultas Keguruan dan ilmu Pendidikan</option>
+                            <option value="fekon">Fakultas Ekonomi dan Bisnis</option>
+                            <option value="pertanian">Fakultas Pertanian</option>
+                            <option value="fik">Fakultas Ilmu Komputer</option>
+                            <option value="fkep">Fakultas Keperawatan</option>
+                            <option value="asmik">Fakultas Sekretari Manajemen Indonesia Klabat</option>
                         </select>
                             <br><br>
                         <label >Program Of Study</label>
-                        <select class="container">
-                            <option value="">-- SELECT PROGRAM OF STUDY --</option>
+                        <select class="container" id="prodi1" class="costume-select">
+                            <option value="">-- SELECT FACULTY --</option>
                         </select><br><br>
                         <button type="button" class="container">Add students</button>
             
@@ -79,7 +79,7 @@
                 <h4>Filter Students By</h4>
                 <form >
                     <label >Faculty</label>
-                    <select class="container">
+                    <select class="container" id="faculty2">
                         <option value="">-- SELECT FACULTY --</option>
                         <option value="PS1">PascaSerjana</option>
                         <option value="filsafat1">Fakultas Filsafat</option>
@@ -89,17 +89,31 @@
                         <option value="fik1">Fakultas Ilmu Komputer</option>
                         <option value="fkep1">Fakultas Keperawatan</option>
                         <option value="asmik1">Fakultas Sekretari Manajemen Indonesia Klabat</option>
-                        </select>
+                    </select>
                         <br><br>
-                        <button type="button" class="container">Show students</button>
+                    <button type="button" class="container">Show students</button>
                         <br><br>
-                        <label >Program Of Study</label>
-                        <select class="container">
-                            <option value="">-- SELECT PROGRAM OF STUDY --</option>
-                        </select><br><br>
-                        <button type="button" class="container">Show students</button>
+                    <label >Program Of Study</label>
+                    <select class="container">
+                        <option value="">-- SELECT PROGRAM OF STUDY --</option>
+                        <option value="">Agronomi</option>
+                        <option value="">Akuntansi</option>
+                        <option value="">Ilmu Filsafat</option>
+                        <option value="">Informatika</option>
+                        <option value="">keperawatan</option>
+                        <option value="">Magister Manajemen</option>
+                        <option value="">Magister Teologi</option>
+                        <option value="">Manajemen</option>
+                        <option value="">Pendidikan agama</option>
+                        <option value="">Pendidikan Bahasa Inggris</option>
+                        <option value="">Pendidikan Ekonomi</option>
+                        <option value="">Pendidikan Luar Sekolah</option>
+                        <option value="">Profesi Ners</option>
+                        <option value="">Sekretari (D3)</option>
+                        <option value="">Sistem Informasi</option>
+                    </select><br><br>
+                    <button type="button" class="container" id="showstudent">Show students</button>
                         
-
                 </form>
             </div>
         </div>
@@ -118,12 +132,12 @@
     </div>
 
     <div class="container">
-        <input type="text" class="form-control" placeholder="Search Student By name ...">
+        <input type="text" class="form-control" id="searchData" placeholder="Search Student By name ...">
         <br>
     </div>
 
     <div class="container">
-        <table class="table">
+        <table class="table" id="tablemahasiswa">
             <thead>
               <tr>
                 <th scope="col">Student ID (NIM)</th>
@@ -134,14 +148,14 @@
                 <th scope="col">Action</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
+            <tbody id="isitabelmahasiswa">
+              <!-- <tr>
                 <td>105021810015</td>
                 <td>Claudio Mambu</td>
                 <td>Male</td>
                 <td>FIK</td>
                 <td>Informatika</td>
-                <td><i class="fas fa-user-minus"></i></td>
+                <td><button type="button" class="colorbutton"><i class="fas fa-user-minus"></i></button></td>
               </tr>
               <tr>
                 <th>_</th>
@@ -159,7 +173,7 @@
                 <td>_</td>
                 <td></td>
               </tr>
-              
+               -->
             </tbody>
           </table>
           <br>
@@ -168,7 +182,9 @@
 
     <footer class="Home" class="container">
         <p class="mb-0">Made With <i class="fab fa-js-square"></i> <i class="fab fa-bootstrap"></i> <i class="fab fa-font-awesome-flag"></i><br> 
-            Claudio_M <i class="far fa-copyright"> 2020</i></p>
+            Claudio_M 🔥 © 2020</i></p>
     </footer>
+
+    <script src="mid.js"></script>
 </body>
 </html>
