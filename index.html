@@ -36,7 +36,7 @@
         <div class="display container">
             <!--FORM KIRI-->
             <div>
-                
+
                 <h4>Add Student</h4>
                 <button type="button" id="showhide" >Show Form Add New student</button>
                     <form id="add-student" style="display: none;">
@@ -48,28 +48,20 @@
                         <input type="text" class="form-control" name="fullName" id="fullName" placeholder="Masukan Full Name ...">
                             <br>
                         <label for="gender">Gender</label><br>
-                        <input type="radio" name="JK" id="gender" value="L"> laki-laki
+                        <input type="radio" name="JK" id="gender1" value="Male"> laki-laki
                             <br>
-                        <input type="radio" name="JK" id="gender" value="P"> perempuan
+                        <input type="radio" name="JK" id="gender2" value="Female"> perempuan
                             <br><br>
                         <label >Faculty</label><br>
                         <select class="container" id="faculty1" class="costume-select" >
                             <option value="">-- SELECT FACULTY --</option>
-                            <option value="PS">PascaSerjana</option>
-                            <option value="filsafat">Fakultas Filsafat</option>
-                            <option value="fkip">Fakultas Keguruan dan ilmu Pendidikan</option>
-                            <option value="fekon">Fakultas Ekonomi dan Bisnis</option>
-                            <option value="pertanian">Fakultas Pertanian</option>
-                            <option value="fik">Fakultas Ilmu Komputer</option>
-                            <option value="fkep">Fakultas Keperawatan</option>
-                            <option value="asmik">Fakultas Sekretari Manajemen Indonesia Klabat</option>
                         </select>
                             <br><br>
                         <label >Program Of Study</label>
                         <select class="container" id="prodi1" class="costume-select">
                             <option value="">-- SELECT FACULTY --</option>
                         </select><br><br>
-                        <button type="button" class="container">Add students</button>
+                        <button type="button" class="container" id="tambahdata">Add students</button>
             
                     </form>
             </div>
@@ -79,22 +71,22 @@
                 <h4>Filter Students By</h4>
                 <form >
                     <label >Faculty</label>
-                    <select class="container" id="faculty2">
+                    <select class="container" id="faculty2" class="costume-select">
                         <option value="">-- SELECT FACULTY --</option>
-                        <option value="PS1">PascaSerjana</option>
-                        <option value="filsafat1">Fakultas Filsafat</option>
-                        <option value="fkip1">Fakultas Keguruan dan ilmu Pendidikan</option>
-                        <option value="fekon1">Fakultas Ekonomi dan Bisnis</option>
-                        <option value="pertanian1">Fakultas Pertanian</option>
-                        <option value="fik1">Fakultas Ilmu Komputer</option>
-                        <option value="fkep1">Fakultas Keperawatan</option>
-                        <option value="asmik1">Fakultas Sekretari Manajemen Indonesia Klabat</option>
+                        <option >PascaSerjana</option>
+                        <option >Fakultas Filsafat</option>
+                        <option >Fakultas Keguruan dan ilmu Pendidikan</option>
+                        <option >Fakultas Ekonomi dan Bisnis</option>
+                        <option >Fakultas Pertanian</option>
+                        <option >Fakultas Ilmu Komputer</option>
+                        <option >Fakultas Keperawatan</option>
+                        <option >Fakultas Sekretari Manajemen Indonesia Klabat</option>
                     </select>
                         <br><br>
-                    <button type="button" class="container">Show students</button>
+                    <button type="button" class="container" id="show1" onclick="searchFaculty()" >Show students</button>
                         <br><br>
                     <label >Program Of Study</label>
-                    <select class="container">
+                    <select class="container" id="prodi2">
                         <option value="">-- SELECT PROGRAM OF STUDY --</option>
                         <option value="">Agronomi</option>
                         <option value="">Akuntansi</option>
@@ -112,7 +104,7 @@
                         <option value="">Sekretari (D3)</option>
                         <option value="">Sistem Informasi</option>
                     </select><br><br>
-                    <button type="button" class="container" id="showstudent">Show students</button>
+                    <button type="button" class="container" id="showstudent" onclick="searchProdi()">Show students</button>
                         
                 </form>
             </div>
@@ -132,7 +124,7 @@
     </div>
 
     <div class="container">
-        <input type="text" class="form-control" id="searchData" placeholder="Search Student By name ...">
+        <input type="text" class="form-control" id="searchData" placeholder="Search Student By name ..." oninput="searchdata()">
         <br>
     </div>
 
